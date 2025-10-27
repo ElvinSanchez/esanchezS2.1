@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="esanchezS2._1.Views.LogIn"
+             Title="LogIn">
+
+    <!--ESTILOS-->
+    <ContentPage.Resources>
+        <Style
+         x:Key="estiloLabel"
+         TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextColor" Value="DarkBlue"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+
+        <Style
+         x:Key="estiloButton"
+         TargetType="Button">
+            <Setter Property="Background" Value="Yellow"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20">
+
+        <Image
+            Source="uisrael.jpg"
+            WidthRequest="300">
+        </Image>
+        
+        <Label 
+            Text="Bienvenidos"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Style="{StaticResource estiloLabel}"/>
+
+        <Label
+            Text="Universidad Tecnologica Israel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Style="{StaticResource estiloLabel}"/>
+
+        <Label
+            Text="Sistema de Calificaciones"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Style="{StaticResource estiloLabel}"/>
+
+        <Grid
+            RowSpacing="20">
+
+            <!--FILAS-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--COLUMNAS-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0" Grid.Column="0"
+                Text="USUARIO:"
+                Style="{StaticResource estiloLabel}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">                
+            </Label>
+
+            <Entry
+                Grid.Row="0" Grid.Column="1"
+                x:Name="txtUsuario"
+                Placeholder="Ingese su USUARIO"
+                FontAttributes="Bold"
+                VerticalOptions="Center">                
+            </Entry>
+
+            <Label
+                Grid.Row="1" Grid.Column="0"
+                Text="CONTRASEÑA"
+                Style="{StaticResource estiloLabel}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+            </Label>
+
+            <Entry
+                Grid.Row="1" Grid.Column="1"
+                x:Name="txtContrasena"
+                Placeholder="Ingese su CONTRASEÑA"
+                IsPassword="True"
+                FontAttributes="Bold"
+                VerticalOptions="Center">
+            </Entry>
+        </Grid>
+
+        <Button
+            x:Name="btnIngresar"
+            Text="INGRESAR"
+            Style="{StaticResource estiloButton}"
+            Clicked="btnIngresar_Clicked">            
+        </Button>
+
+        <Image
+            Source="uisrael.jpg"
+            WidthRequest="300">
+        </Image>
+        
+    </VerticalStackLayout>
+</ContentPage>

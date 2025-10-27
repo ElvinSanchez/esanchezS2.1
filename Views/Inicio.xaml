@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="esanchezS2._1.Views.Inicio"
+             Title="Inicio">
+    <ScrollView>
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20">
+        
+        <Label 
+            Text="Universidad Tecnologica Israel"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="25"
+            FontAttributes="Bold"
+            TextColor="DarkBlue"/>
+
+            <Image
+            Source="uisrael.jpg"
+            WidthRequest="300">                
+            </Image>
+
+            <Label
+                Text="Sistema de Calificaciones"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="Red">
+            </Label>
+
+            <Grid
+            RowSpacing="20">
+
+            <!--FILAS-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--COLUMNAS-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Text="Estudiante"
+                VerticalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"
+                Grid.Row="0" Grid.Column="0">
+            </Label>
+
+            <!--COMBO BOX-->
+            <Picker
+                x:Name="pkEstudiante"
+                Grid.Row="0" Grid.Column="1">
+                <Picker.Items>
+                    <x:String>MEDINA LOOR JAHIR ANTONIO</x:String>
+                    <x:String>MEDRANDA DE LA CRUZ ELVIS ENRIQUE</x:String>
+                    <x:String>MENDEZ MAFLA JORGE ALEJANDRO</x:String>
+                    <x:String>SANCHEZ TULCAN ELVIN JESUS</x:String>
+                    <x:String>SIMBAÑA TAMBA WILLIAM ANDRES</x:String>
+                    <x:String>TACO QUIROGA OMAR PATRICIO</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+
+        <Label
+            Text="PARCIAL 1"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="20"
+            FontAttributes="Bold">
+        </Label>
+
+        <Grid
+            RowSpacing="10"
+            ColumnSpacing="10">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--INGRESO PARCIAL 1-->
+            <Label
+                Grid.Row="0" Grid.Column="0"
+                Text="Nota de Seguimiento 1"
+                VerticalOptions="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                Grid.Row="0" Grid.Column="1"
+                x:Name="txtNota1"
+                Keyboard="Numeric"
+                MaxLength="4"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <BoxView
+                Grid.Row="0" Grid.Column="2"
+                Color="LightBlue"/>
+            
+            <Entry
+                Grid.Row="0" Grid.Column="2"
+                x:Name="txtN1"
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+
+            <!--INGRESO EXAMEN PARCIAL 1-->
+            <Label
+                Grid.Row="1" Grid.Column="0"
+                Text="Nota Examen P1"
+                VerticalOptions="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                Grid.Row="1" Grid.Column="1"
+                x:Name="txtExamen1"
+                Keyboard="Numeric"
+                MaxLength="4"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <BoxView
+                Grid.Row="1" Grid.Column="2"
+                Color="LightBlue"/>
+            <Entry
+                Grid.Row="1" Grid.Column="2"
+                x:Name="txtEP1"
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+
+            <!--CALCULO PARCIAL 1-->
+            <Label
+                Grid.Row="2" Grid.Column="0"
+                Text="Nota Parcial 1"
+                VerticalOptions="Center"
+                FontSize="20"
+                TextColor="Red"
+                FontAttributes="Bold"/>
+            <Entry
+                Grid.Row="2" Grid.Column="1"
+                IsEnabled="False"/>
+            <BoxView
+                Grid.Row="2" Grid.Column="2"
+                Color="LightBlue"/>
+            <Entry
+                Grid.Row="2" Grid.Column="2"
+                x:Name="txtTP1"
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="DarkRed"/>
+        </Grid>
+
+        <Label
+    Text="PARCIAL 2"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="20"
+            FontAttributes="Bold">
+        </Label>
+
+        <Grid
+    RowSpacing="10"
+    ColumnSpacing="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--INGRESO PARCIAL 2-->
+            <Label 
+                Grid.Row="0" Grid.Column="0"
+                Text="Nota de Seguimiento 2"
+                VerticalOptions="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                Grid.Row="0" Grid.Column="1"
+                x:Name="txtNota2"
+                Keyboard="Numeric"
+                MaxLength="4"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <BoxView
+                Grid.Row="0" Grid.Column="2"
+                Color="LightBlue"/>
+            <Entry
+                Grid.Row="0" Grid.Column="2"
+                x:Name="txtN2" IsReadOnly="True"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+
+            <!--INGRESO EXAMEN PARCIAL 2-->
+            <Label
+                Grid.Row="1" Grid.Column="0"
+                Text="Nota Examen P2"
+                VerticalOptions="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                x:Name="txtExamen2"
+                Keyboard="Numeric"
+                HorizontalTextAlignment="Center"
+                FontSize="20" FontAttributes="Bold"/>
+            <BoxView
+                Grid.Row="1" Grid.Column="2"
+                Color="LightBlue"/>
+            <Entry
+                Grid.Row="1" Grid.Column="2"
+                x:Name="txtEP2"
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"/>
+
+            <!--CALCULO PARCIAL 2-->
+            <Label Grid.Row="2" Grid.Column="0"
+                   Text="Nota Parcial 2"
+                   VerticalOptions="Center"
+                   FontSize="20"
+                   TextColor="Red"
+                   FontAttributes="Bold"/>
+            <Entry
+                Grid.Row="2" Grid.Column="1"
+                IsEnabled="False"/>
+            <BoxView
+                Grid.Row="2" Grid.Column="2"
+                Color="LightBlue"/>
+            <Entry
+                Grid.Row="2" Grid.Column="2"
+                x:Name="txtTP2"
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="DarkRed"/>
+        </Grid>
+
+        <Button
+            x:Name="btnCalcular"
+            Text="CALCULAR"
+            FontAttributes="Bold"
+            Clicked="btnCalcular_Clicked">            
+        </Button>
+
+        <Label
+            Text="Nota Final"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            TextColor="DarkRed"
+            FontSize="25"
+            FontAttributes="Bold">
+        </Label>
+
+            <Grid
+                RowSpacing="10"
+                ColumnSpacing="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Entry
+                    Grid.Row="0" Grid.Column="0"
+                    x:Name="txtResultado"
+                    IsReadOnly="True"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="DarkRed"
+                    FontSize="20"
+                    FontAttributes="Bold">
+                </Entry>
+
+                <Entry
+                    Grid.Row="0" Grid.Column="1"
+                    x:Name="txtNota"
+                    IsReadOnly="True"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="DarkRed"
+                    FontSize="15"
+                    FontAttributes="Bold">
+                </Entry>
+                
+                <!--
+                <DatePicker
+                    Grid.Row="0" Grid.Column="2"
+                    x:Name="dfFecha"
+                    Format="dd/MM/yyyy"
+                    IsVisible="False">
+                </DatePicker>
+                -->
+
+                <Entry
+                    Grid.Row="0" Grid.Column="2"
+                    x:Name="txtFecha"
+                    IsReadOnly="True"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="15">
+                </Entry>
+            </Grid>
+
+            <Image
+                Source="uisrael.jpg"
+                WidthRequest="300">                
+            </Image>
+
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
